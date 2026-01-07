@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainrot Shop - Premium Roblox Items</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🧠 Brainrot Shop</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#shop" class="nav-link">Shop</a>
+                <a href="#payment" class="nav-link">Payment</a>
+                <a href="#admin" class="nav-link">Admin</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome to Brainrot Shop</h1>
+                    <p class="hero-subtitle">Your #1 destination for premium Roblox items and in-game assets</p>
+                    <button class="btn btn-primary" onclick="navigateToSection('shop')">Browse Items</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="featured-section">
+                <h2 class="section-title">✨ Featured Items</h2>
+                <div id="featured-items" class="items-grid">
+                    <!-- Featured items will be loaded here -->
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Premium Items</h3>
+                        <p>Exclusive Roblox items including Brainrots, Garamas, and Dragons</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h3>Multiple Payment Options</h3>
+                        <p>PayPal, Venmo, Cash App, and Cryptocurrency accepted</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Fast Delivery</h3>
+                        <p>Quick and secure delivery of all purchased items</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure Transactions</h3>
+                        <p>Safe and trusted payment processing</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="section">
+        <div class="container">
+            <h2 class="section-title">🛍️ Shop All Items</h2>
+            
+            <div class="shop-filters">
+                <button class="filter-btn active" data-category="all">All Items</button>
+                <button class="filter-btn" data-category="brainrot">Brainrot</button>
+                <button class="filter-btn" data-category="garama">Garama</button>
+                <button class="filter-btn" data-category="dragon">Dragon</button>
+            </div>
+
+            <div id="shop-items" class="items-grid">
+                <!-- Shop items will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment" class="section">
+        <div class="container">
+            <h2 class="section-title">💰 Payment Options</h2>
+            
+            <div class="payment-info">
+                <p class="payment-intro">Choose your preferred payment method below. After selecting an item, contact us with your payment confirmation.</p>
+                
+                <div class="payment-methods">
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <h3>💙 PayPal</h3>
+                        </div>
+                        <div class="payment-details">
+                            <p><strong>Email:</strong> payments@brainrotshop.com</p>
+                            <p class="payment-instructions">Send payment to the email above and include your Roblox username in the notes.</p>
+                        </div>
+                    </div>
+
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <h3>💰 Venmo</h3>
+                        </div>
+                        <div class="payment-details">
+                            <p><strong>Username:</strong> @BrainrotShop</p>
+                            <p class="payment-instructions">Send payment and include your Roblox username in the description.</p>
+                        </div>
+                    </div>
+
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <h3>💵 Cash App</h3>
+                        </div>
+                        <div class="payment-details">
+                            <p><strong>Cashtag:</strong> $BrainrotShop</p>
+                            <p class="payment-instructions">Send payment and include your Roblox username in the note.</p>
+                        </div>
+                    </div>
+
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <h3>₿ Bitcoin</h3>
+                        </div>
+                        <div class="payment-details">
+                            <p><strong>BTC Address:</strong></p>
+                            <code class="crypto-address">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</code>
+                            <div class="qr-code">
+                                <img src="images/btc-qr.svg" alt="Bitcoin QR Code" id="btc-qr">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <h3>💎 Ethereum</h3>
+                        </div>
+                        <div class="payment-details">
+                            <p><strong>ETH Address:</strong></p>
+                            <code class="crypto-address">0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb</code>
+                            <div class="qr-code">
+                                <img src="images/eth-qr.svg" alt="Ethereum QR Code" id="eth-qr">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-note">
+                    <p><strong>⚠️ Important:</strong> After making your payment, please contact us with:</p>
+                    <ul>
+                        <li>Your Roblox username</li>
+                        <li>The item(s) you purchased</li>
+                        <li>Payment confirmation (screenshot or transaction ID)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin" class="section">
+        <div class="container">
+            <h2 class="section-title">🔧 Admin Dashboard</h2>
+            
+            <div class="admin-login" id="admin-login">
+                <div class="login-card">
+                    <h3>Admin Login</h3>
+                    <input type="password" id="admin-password" placeholder="Enter admin password" class="input-field">
+                    <button class="btn btn-primary" onclick="adminLogin()">Login</button>
+                    <p class="login-error" id="login-error"></p>
+                </div>
+            </div>
+
+            <div class="admin-panel" id="admin-panel" style="display: none;">
+                <button class="btn btn-secondary" onclick="adminLogout()">Logout</button>
+                
+                <div class="admin-section">
+                    <h3>Add New Item</h3>
+                    <form id="add-item-form" class="admin-form">
+                        <div class="form-group">
+                            <label>Item Name</label>
+                            <input type="text" id="item-name" class="input-field" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select id="item-category" class="input-field" required>
+                                <option value="brainrot">Brainrot</option>
+                                <option value="garama">Garama</option>
+                                <option value="dragon">Dragon</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Price (USD)</label>
+                            <input type="number" id="item-price" class="input-field" step="0.01" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea id="item-description" class="input-field" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Image URL</label>
+                            <input type="text" id="item-image" class="input-field" placeholder="https://example.com/image.png" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="item-featured">
+                                Featured Item
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Add Item</button>
+                    </form>
+                </div>
+
+                <div class="admin-section">
+                    <h3>Manage Items</h3>
+                    <div id="admin-items-list" class="admin-items">
+                        <!-- Admin items list will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Item Modal -->
+    <div id="item-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
