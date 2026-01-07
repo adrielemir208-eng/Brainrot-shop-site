@@ -96,9 +96,10 @@ function getItemById(id) {
 // Add new item
 function addItem(item) {
     const items = getItems();
+    // Simple ID generation - in production, use crypto.randomUUID() or server-generated IDs
     const newItem = {
         ...item,
-        id: Date.now() // Simple ID generation
+        id: Date.now()
     };
     items.push(newItem);
     localStorage.setItem('brainrotItems', JSON.stringify(items));

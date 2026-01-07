@@ -1,5 +1,10 @@
-// Admin password (in production, this should be handled server-side)
-const ADMIN_PASSWORD = 'admin123';
+// ⚠️ SECURITY WARNING: This is for demonstration purposes only!
+// In production, implement proper server-side authentication with:
+// - Secure password hashing (bcrypt, argon2)
+// - Session management
+// - HTTPS encryption
+// - Environment variables for sensitive data
+const ADMIN_PASSWORD = 'admin123'; // TODO: Replace with secure authentication
 let isAdminLoggedIn = false;
 
 // Navigation
