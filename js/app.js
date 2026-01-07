@@ -172,23 +172,65 @@ function adminLogout() {
 // Setup admin form
 function setupAdminForm() {
     const form = document.getElementById('add-item-form');
+    const imageUpload = document.getElementById('item-image-upload');
+    const imageUrlInput = document.getElementById('item-image');
+    const uploadPreview = document.getElementById('upload-preview');
+    const previewImage = document.getElementById('preview-image');
+    const uploadFilename = document.getElementById('upload-filename');
+    let uploadedImageData = null;
+    
+    // Handle image file upload
+    if (imageUpload) {
+        imageUpload.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                // Check file size (max 2MB)
+                if (file.size > 2 * 1024 * 1024) {
+                    alert('Image file is too large! Please choose an image smaller than 2MB.');
+                    imageUpload.value = '';
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    uploadedImageData = event.target.result;
+                    previewImage.src = uploadedImageData;
+                    uploadFilename.textContent = file.name;
+                    uploadPreview.style.display = 'block';
+                    // Clear URL input when file is uploaded
+                    imageUrlInput.value = '';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
     
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        
+        // Use uploaded image data or URL input
+        const imageValue = uploadedImageData || imageUrlInput.value;
+        
+        if (!imageValue) {
+            alert('Please upload an image or provide an image URL!');
+            return;
+        }
         
         const newItem = {
             name: document.getElementById('item-name').value,
             category: document.getElementById('item-category').value,
             price: parseFloat(document.getElementById('item-price').value),
             description: document.getElementById('item-description').value,
-            image: document.getElementById('item-image').value,
+            image: imageValue,
             featured: document.getElementById('item-featured').checked
         };
         
         addItem(newItem);
         
-        // Reset form
+        // Reset form and preview
         form.reset();
+        uploadedImageData = null;
+        uploadPreview.style.display = 'none';
         
         // Reload admin items
         loadAdminItems();

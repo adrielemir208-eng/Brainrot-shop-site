@@ -2,6 +2,31 @@
 
 A modern, responsive e-commerce website for selling premium Roblox items and in-game assets.
 
+## 🎯 HOW TO VIEW THE WEBSITE
+
+**The website is ready to use! Just follow these simple steps:**
+
+### Option 1: View Locally (EASIEST - No Internet Required!)
+1. **Download** or **clone** this repository to your computer
+2. **Find the `index.html` file** in the main folder
+3. **Double-click `index.html`** OR **Right-click** → **Open with** → Choose your browser (Chrome, Firefox, Safari, etc.)
+4. **That's it!** The website will open in your browser immediately! 🎉
+
+### Option 2: Deploy to GitHub Pages (Get a Live URL)
+1. **Merge this PR** to your main branch
+2. Go to your repository **Settings** → **Pages**
+3. Under "Source", select **main** branch
+4. Click **Save**
+5. Your site will be live at: `https://adrielemir208-eng.github.io/Brainrot-shop-site/`
+6. Wait 2-3 minutes for it to deploy, then visit the URL!
+
+### Option 3: Quick Deploy to Netlify (Free Live URL)
+1. Go to [Netlify Drop](https://app.netlify.com/drop)
+2. Drag and drop the **entire project folder** onto the page
+3. Get an instant live URL to share!
+
+**💡 TIP:** If you see a white screen, press `Ctrl+Shift+Delete` (or `Cmd+Shift+Delete` on Mac), clear your cache and local storage, then refresh!
+
 ## ✨ Features
 
 - **🏠 Homepage** - Eye-catching hero section with featured items
@@ -59,16 +84,20 @@ See **DOCUMENTATION.md** for detailed deployment instructions.
 ### Adding Items
 1. Login to Admin Dashboard
 2. Fill out the item form
-3. Click "Add Item"
-4. Item appears instantly!
+3. **Upload your own Brainrot images** using the "📁 Upload Image File" button (recommended!)
+4. OR paste an image URL
+5. Click "Add Item"
+6. Item appears instantly!
 
 ### Item Details
 - **Name** - Product name
 - **Category** - Brainrot, Garama, or Dragon
 - **Price** - USD amount
 - **Description** - Item details
-- **Image URL** - Link to product image
+- **Image** - Upload your own image file OR paste an image URL
 - **Featured** - Show on homepage
+
+**✨ NEW: You can now upload your own custom Brainrot images directly from your computer!**
 
 ## 💰 Payment Methods Supported
 
